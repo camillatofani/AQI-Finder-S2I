@@ -1,0 +1,188 @@
+/******** General ********/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+
+body {
+	background-color: #e8e8e8;
+}
+
+/******** Text ********/
+
+.intro {
+	width: 700px;
+	margin: auto;
+	padding: 30px 0px;
+}
+h1 {
+	font-size: 45px;
+	line-height: 45px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+h2 {
+	font-size: 35px;
+	line-height: 35px;
+	padding-bottom: 20px;
+	font-weight: 900;
+}
+.intro p {
+	font-size: 18px;
+	line-height: 22px;
+	padding-bottom: 20px;
+}
+
+/******** Accordion ********/
+
+summary {
+	font-size: 25px;
+	font-weight: 600;
+	background-color: rgba(255, 255, 255, 0.2);;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	outline: none;
+	border-radius: 20px;
+	text-align: left;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 0px 0px 22px rgb(0,0,0,0.1);
+}
+details[open] summary ~ * {
+ 	animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+	0%    {opacity: 0; margin-top: -10px}
+	100%  {opacity: 1; margin-top: 0px}
+}
+details > summary::after {
+	position: absolute;
+	content: "+";
+	right: 20px;
+}
+details[open] > summary::after {
+	position: absolute;
+	content: "-";
+	right: 20px;
+}
+
+/******** Box White ********/
+
+.aqiBox {
+	background-color: rgb(255,255,255,0.2);
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width:500px;
+	margin: auto;
+	box-shadow: 0px 0px 22px rgb(0,0,0,0.1);
+	padding: 20px;
+}
+
+/******** Your City Button ********/
+
+.youtAqiCityButton {
+	max-width: 180px !important;
+}
+
+/******** Result ********/
+
+.aqiResult {
+	margin-bottom: 30px;
+}
+.nameCity {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+}
+.aqiCity {
+	font-size: 50px;
+	line-height: 50px;
+	padding-top: 10px;
+	font-weight: 700;
+	text-align: center;
+}
+
+/******** Form ********/
+
+.aqiInput {
+	border-radius: 50px;
+	border: solid 0px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px 0px;
+	text-align: center;
+	outline: none;
+}
+button {
+	border-radius: 50px;
+	width: 100%;
+	background-color: #222222;
+	color: #ffffff;
+	border: none;
+	padding: 10px 0px;
+	cursor: pointer;
+	outline: none;
+}
+
+/******** AQI Info ********/
+
+.aqiInfo {
+	text-align: center;
+	margin-top: -20px;
+}
+
+/******** Footer ********/
+
+footer, footer em {
+	margin: 50px 0px;
+	text-align: center;
+	font-size: 13px;
+	opacity: 0.5;
+}
+
+/******** Responsive ********/
+
+@media only screen and (max-width: 700px) {
+
+	body {
+		padding: 0px 20px;
+	}
+
+	/******** Text ********/
+
+	.intro {
+		width: 100%;
+	}
+	h1 {
+		font-size: 35px;
+		line-height: 35px;
+	}
+	h2 {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	/******** Accordion ********/
+
+	summary {
+	  font-size: 20px;
+	}
+
+	/******** Box White ********/
+
+	.aqiBox {
+		width:100%;
+	}
+
+}
